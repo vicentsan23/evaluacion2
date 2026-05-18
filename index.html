@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Gestión - JS Avanzado</title>
+    <!-- Tailwind CSS CDN para diseño rápido y moderno -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center p-4 antialiased">
+
+    <div class="w-full max-w-4xl bg-gray-800 rounded-2xl shadow-2xl border border-gray-700 overflow-hidden grid grid-cols-1 md:grid-cols-5">
+        
+        <!-- Columna Izquierda: Formulario (2/5 del ancho) -->
+        <div class="md:col-span-2 p-6 border-b md:border-b-0 md:border-r border-gray-700 bg-gray-850">
+            <h2 class="text-xl font-bold text-white mb-1">Nuevo Registro</h2>
+            <p class="text-xs text-gray-400 mb-6">Ingresa los datos del usuario de forma segura.</p>
+            
+            <form id="miFormulario" class="space-y-4" novalidate>
+                <!-- Campo Nombre -->
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan Pérez" 
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition">
+                    <div id="errorNombre" class="error-msg text-xs text-red-400 mt-1"></div>
+                </div>
+
+                <!-- Campo Email -->
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Correo Electrónico</label>
+                    <input type="email" id="email" placeholder="juan@correo.com" 
+                        class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition">
+                    <div id="errorEmail" class="error-msg text-xs text-red-400 mt-1"></div>
+                </div>
+
+                <!-- Campo Selección -->
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">Categoría de Membresía</label>
+                    <div class="relative">
+                        <select id="categoria" 
+                            class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition appearance-none">
+                            <option value="" class="bg-gray-900">Seleccione una opción...</option>
+                            <option value="Premium" class="bg-gray-900">Premium ⭐</option>
+                            <option value="Estándar" class="bg-gray-900">Estándar 👤</option>
+                        </select>
+                    </div>
+                    <div id="errorCategoria" class="error-msg text-xs text-red-400 mt-1"></div>
+                </div>
+
+                <!-- Botón Submit -->
+                <button type="submit" 
+                    class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm py-2.5 px-4 rounded-lg shadow-md transition duration-150 ease-in-out transform active:scale-98 mt-2 cursor-pointer">
+                    Agregar Miembro
+                </button>
+            </form>
+        </div>
+
+        <!-- Columna Derecha: Lista de Datos (3/5 del ancho) -->
+        <div class="md:col-span-3 p-6 flex flex-col justify-between">
+            <div>
+                <h2 class="text-xl font-bold text-white mb-1">Registros Activos</h2>
+                <p class="text-xs text-gray-400 mb-6">Listado dinámico almacenado en memoria.</p>
+                
+                <!-- Contenedor de la lista dinámica -->
+                <div id="listaContenedor" class="space-y-3 max-h-[340px] overflow-y-auto pr-1 custom-scrollbar">
+                    <!-- Los items de JavaScript se inyectarán aquí -->
+                    <div class="text-center text-sm text-gray-500 py-8 italic">
+                        No hay registros ingresados todavía.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer del panel -->
+            <div class="border-t border-gray-700 pt-4 mt-4 flex justify-between items-center text-xs text-gray-500">
+                <span>Estado: <span class="text-emerald-400 font-medium">● Operacional</span></span>
+                <span>DOM Dinámico</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script de lógica existente -->
+    <script src="app.js"></script>
+</body>
+</html>
