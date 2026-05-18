@@ -22,7 +22,7 @@ Para este proyecto, se integró el uso de Inteligencia Artificial como asistente
 
 
 
-2\.  \*\*Lógica de Validación de Duplicados:\*\*
+2.  **Lógica de Validación de Duplicados:**
 
 &#x20;   **\*Prompt:** "Necesito una forma eficiente en JS para verificar si un email ya existe dentro de un arreglo de objetos antes de agregarlo."
 
@@ -30,7 +30,7 @@ Para este proyecto, se integró el uso de Inteligencia Artificial como asistente
 
 
 
-3\.  \*\*Estructura UI con Tailwind:\*\*
+3.  **Estructura UI con Tailwind:**
 
 &#x20;   **Prompt:** "Genera una estructura de formulario y lista moderna usando clases de Tailwind CSS en modo oscuro."
 
