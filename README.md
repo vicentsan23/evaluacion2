@@ -44,5 +44,5 @@ Para este proyecto, se integró el uso de Inteligencia Artificial como asistente
 
 ## 🚀 Despliegue
 
-La aplicación se encuentra disponible en: 
+La aplicación se encuentra disponible en: https://vicentsan23.github.io/evaluacion2/
 
